@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* ════════════════════════════════════════════════════════════════════
+   TOKENS — FABIANA FERNANDES
+   Paleta: Pastel quente (creme + pêssego) com âncora em azul profundo
+   Tipografia: Lora (display) + Manrope (sans)
+   ════════════════════════════════════════════════════════════════════ */
+
+@theme {
+  --font-display: "Lora", ui-serif, Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary:      #2D4F6B;
+  --color-primary-dark: #1A3349;
+  --color-secondary:    #E8B5A0;
+  --color-dark:         #1B2733;
+  --color-bg-warm:      #F7EFE7;
+  --color-bg-light:     #FBF7F2;
+  --color-text-main:    #2C3540;
+  --color-off-white:    #FFFFFF;
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   FIXO — NAO MODIFICAR NADA ABAIXO
+   ════════════════════════════════════════════════════════════════════ */
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-secondary); border-radius: 3px; }
+* { scrollbar-width: thin; scrollbar-color: var(--color-secondary) transparent; }
+
+/* Shimmer button */
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  padding: 1.25rem 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%);
+  transform: translateX(-150%) skewX(-20deg);
+  animation: shimmer-sweep 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Aurora keyframes */
+@keyframes aurora-1 {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33%       { transform: translate(40px, -30px) scale(1.15) rotate(5deg); }
+  66%       { transform: translate(-20px, 25px) scale(0.92) rotate(-3deg); }
+}
+@keyframes aurora-2 {
+  0%, 100% { transform: translate(0, 0) scale(1.1) rotate(0deg); }
+  25%       { transform: translate(-50px, 30px) scale(0.9) rotate(8deg); }
+  75%       { transform: translate(35px, -40px) scale(1.2) rotate(-6deg); }
+}
+@keyframes aurora-3 {
+  0%, 100% { transform: translate(0, 0) scale(0.95); }
+  50%       { transform: translate(20px, 20px) scale(1.05); }
+}
+
+/* Section spacing */
+.section-padding    { padding-top: 6rem;  padding-bottom: 6rem; }
+.section-padding-lg { padding-top: 10rem; padding-bottom: 10rem; }
+@media (min-width: 1024px) {
+  .section-padding    { padding-top: 8rem;  padding-bottom: 8rem;  }
+  .section-padding-lg { padding-top: 14rem; padding-bottom: 14rem; }
+}
+
+/* Container */
+.container-ultra {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Eyebrow */
+.eyebrow-ultra {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
