@@ -12,7 +12,7 @@ const COPY = {
   paragraphs: [
     'Me formei em psicologia no final de 2001 e atendi por 6 anos consecutivos na clínica. Depois saí para a área de Recursos Humanos, onde fiquei 18 anos lendo comportamento humano em recrutamento e seleção.',
     'Quando decidi voltar à clínica, perdi estabilidade financeira, salário fixo e benefícios. No começo, fiquei paralisada, só absorvendo conhecimento. A virada veio quando decidi colocar em prática o plano de retomar.',
-    'Hoje atendo 100% online mulheres adultas com ansiedade, burnout e esgotamento por sobrecarga de papéis. Conecto a Psicoterapia Breve de Base Psicanalítica com a estrutura prática da TCC, e somo a isso 18 anos lendo comportamento humano dentro de empresas.',
+    'Hoje atendo 100% online mulheres com sobrecarga, ansiedade e burnout. Conecto a Psicoterapia Breve de Base Psicanalítica com a estrutura prática da TCC, e somo a isso 18 anos lendo comportamento humano dentro de empresas.',
   ],
   transition: 'Você sabe quem está com você. Deixa eu te mostrar como a gente começa.',
   ctaText: 'Quero conversar com você',
